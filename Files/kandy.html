@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/table.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TravelGram</title>
+    <link rel="icon" href="Pics/Icon/cropped-travel-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+    .myclass
+    a:link {
+  color: blue;
+}
+
+
+a:visited {
+  color: grey;
+}
+
+
+a:hover {
+  color: red;
+}
+
+
+a:active {
+  color: darkred;
+}
+    
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+    
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+    
+.column {
+  float: center;
+  width: 10;
+  padding: 0px;
+}
+
+
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.container {
+  position: relative;
+  display: none;
+}
+
+
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+<link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container"></div>
+<nav>
+    <table id="top" width="100%" border="1" style="border-top-style: hidden">
+        <tbody>
+            <tr style="background-color:lightgrey">
+                <th height="40" style="font-size:12px; font-weight: 600;text-align: left;border-right:hidden" ><a id="myclass" href="#gallery" style="text-decoration: none">&nbsp;&nbsp; GALLERY &nbsp;&nbsp;</a></th>
+                    <th height="40" colspan="2" style="font-size:12px; font-weight: 600;text-align: left;border-right:hidden" >
+                <div class="search-container">
+    <form action="">
+      <input type="text" placeholder="Search..." name="search">&nbsp;
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+                </th>
+        <th width="419" height="40" colspan="3" style="font-size:13px; font-weight: 600;text-align: right" > &nbsp; HOTLINE: +94 112 311 311 &nbsp;&nbsp;<a href="https://www.inquiries@travelgram.lk/" target="_blank" style="text-decoration: none">inquiries@travelgram.lk</a>&nbsp;&nbsp;
+        </th>
+        
+      </tr>
+        <tr height="90">
+            <th width="40%" scope="col"  style="text-align: left" >&nbsp;<a id="myclass" href="../index.html" style="text-decoration: none">  <img src="Pics/images (1)1.png" alt="" width="140"></a></th>
+            
+            <th width="3%" scope="col" style="font-size:14px; font-weight: 600;text-align: center;background-color: lightgrey"><a id="myclass" href="../index.html" style="text-decoration: none">HOME</a></th>
+            <th width="5%" scope="col" style="font-size:14px; font-weight: 600;text-align: center"><a id="myclass" href="#tour" style="text-decoration: none">TOUR PACKAGES</a></th>
+        <th width="3%" scope="col" style="font-size:14px; font-weight: 600">
+            <div class="dropdown" style="text-align: center">
+  <button class="dropbtn" style="font-size:14px; font-weight: 600;text-align: center">DESTINATIONS</button>
+  <div class="dropdown-content">
+    <a href="galle.html" style="text-decoration: none;text-align: center" target="_blank">Galle</a>
+    <a href="kandy.html" style="text-decoration: none;text-align: center">Kandy</a>
+    <a href="ella.html" style="text-decoration: none;text-align: center" target="_blank">Ella</a>
+      <a href="jaffna.html" style="text-decoration: none;text-align: center" target="_blank">Jaffna</a>
+      <a href="anuradhapura.html" style="text-decoration: none;text-align: center" target="_blank">Anuradhapura</a>
+  </div>
+</div></th>
+            <th width="4%" scope="col" style="font-size:14px; font-weight: 600;text-align: center"><a id="myclass" href="Application Form.html" style="text-decoration: none">BOOK NOW</a></th>
+            <th width="4%" scope="col" style="font-size:14px; font-weight: 600;text-align: center" id="myclass"><a href="#footer" style="text-decoration: none">CONTACT US</a></th>
+    </tr>
+  </tbody>
+</table>
+	</nav>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="Pics/kandy/Kandy-Day-Tour.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="Pics/kandy/kandy.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="Pics/kandy/gettyimages-472392160-2048x2048.jpg" style="width:100%">
+</div>
+
+    <div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="Pics/kandy/wp4359144.jpg" style="width:100%">
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="Pics/kandy/gettyimages-138770307-2048x2048.jpg" style="width:100%">
+</div>
+    
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    
+    function myFunction(imgs) {
+  
+  var expandImg = document.getElementById("expandedImg");
+  
+  var imgText = document.getElementById("imgtext");
+  
+  expandImg.src = imgs.src;
+  
+  imgText.innerHTML = imgs.alt;
+  
+  expandImg.parentElement.style.display = "block";
+}
+    
+</script>
+  <hr><br><table width="100%" border="0" style="border-top-style: hidden">
+    <tr>
+        <th  width="50%" height="10%" cellpadding="1" colspan="2">
+    <h3 style="text-align:center;text-shadow: 1px 1px 2px grey">Beautiful Kandy</h3>
+            <center><font size="2" style="text-align:center;font-weight: 500">CULTURAL TOURS</font></center>
+            <br>
+            <h6 style="text-align:center;font-weight: 500">
+            The bustling hill-country capital of Kandy lies on a plain amidst towering hills and looped by<br>
+                Sri Lanka's largest river: the Mahaweli. The town’s pleasant temperate climate, its scenic location and<br>
+                its rich history has made it a favourite haunt for travellers. It is also the natural gateway to the stirring<br>
+                peaks of Sri Lanka’s hill country. During the month of August, Kandy dazzles with the sounds and<br>
+                lights of the Kandy Perehara – a magnificent procession where a sacred tooth relic of<br>
+                Lord Buddha is majestically paraded on elephant back along the streets.</h6>
+            <br><br></th>
+    <th rowspan="2"><center>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31661.20958103469!2d80.6128284990269!3d7.280469633371463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sthings%20to%20do%20in%20kandy!5e0!3m2!1sen!2slk!4v1574717617706!5m2!1sen!2slk" width="70%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></center>
+      </th>
+    </tr>
+            <tr>
+                <th>
+    <div class="content">
+<ul style="text-align:left;font-size:14px">
+	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="Pics/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt="" style="vertical-align: middle" width="20"><span class="txt" style="vertical-align: middle;font-weight: 700">&emsp;Temple of the Sacred Tooth Relic</span></li><br>
+	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="Pics/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt="" style="vertical-align: middle" width="20"><span class="txt" style="vertical-align: middle;font-weight: 700">&emsp;Royal Botanical Gardens Peradeniya</span></li><br>
+	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="Pics/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt="" style="vertical-align: middle" width="20"><span class="txt" style="vertical-align: middle;font-weight: 700">&emsp;Kandy Lake</span></li><br>
+	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="Pics/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt="" style="vertical-align: middle" width="20"><span class="txt" style="vertical-align: middle;font-weight: 700">&emsp;World Buddhist Museum</span></li><br>
+	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="Pics/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt="" style="vertical-align: middle" width="20"><span class="txt" style="vertical-align: middle;font-weight: 700">&emsp;Knuckles Mountain Range</span></li>
+        </ul>
+            </div>
+        </th>
+                <th><center><div style="background-color: whitesmoke;width: 350px;height:220px; padding: 20px;text-align: center;vertical-align: middle;border: 1px solid black;box-shadow: 5px 5px 5px grey;font-weight: 700">Day tour to Kandy from Colombo<br>LKR 9,552 per adult<br><br>
+                    <div style="font-weight: 500;text-align: left">
+                        <li style="list-style: disc">Two day tour</li>
+                        <li style="list-style: disc">Food & beverages</li>
+                    <li style="list-style: disc">Golf or other outdoor activities</li>
+                    <li style="list-style: disc">Entrance tickets</li>
+                        <li style="list-style: disc">Sinhala & English speaking chauffeur guide</li>
+                    </div>
+                    <div>
+                    <p align="right"><a href="Application%20Form.html" target="_blank" style="text-decoration: none;"><button class="dropbtn" style="font-size:16px; font-weight: 600;text-align: center;background-color: aqua">Book Now</button></a></p>
+                    </div>
+                    </div></center>
+                </th>
+    </tr>
+    </table>
+    <br><hr><br>
+    <h3 id="gallery" style="text-align:center;text-shadow: 1px 1px 2px grey">Gallery</h3>
+    <br>
+<div>
+    <table width="80%" height="450" border="0" align="center" style="border-top: hidden">
+        <tr>
+            <th width="10%">
+  <div class="column"><img src="Pics/New%20folder%202/gettyimages-113409680-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">  </div>
+              <div class="column"><img src="Pics/New%20folder/gettyimages-634465685-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">              </div>
+                </th>
+            <th width="10%">
+  <div class="column">
+    <img src="Pics/New%20folder%202/gettyimages-1161659325-2048x2048.jpg" alt="" width="200" onclick="myFunction(this);">  </div>
+              <div class="column">
+                <img src="Pics/New%20folder%202/gettyimages-200538123-001-2048x2048.jpg" alt="" width="200" onclick="myFunction(this);">              </div>
+            </th>
+            <th width="10%">
+  <div class="column"><img src="Pics/New%20folder%202/gettyimages-530253930-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">
+  </div>
+              <div class="column"><img src="Pics/New%20folder%202/gettyimages-945691164-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">
+              </div>
+            </th>
+            <th width="10%">
+  <div class="column">
+    <img src="Pics/New%20folder/yves-alarie-yaGheETUSK4-unsplash.jpg" alt="" width="200" onclick="myFunction(this);">  </div>
+              <div class="column">
+                <img src="Pics/New%20folder%202/gettyimages-631719633-2048x2048.jpg" alt="" width="200" onclick="myFunction(this);">              </div>
+            </th>
+            <th width="10%">
+    <div class="column"><img src="Pics/New%20folder%202/gettyimages-1150504057-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">
+                </div>
+              <div class="column"><img src="Pics/New%20folder%202/gettyimages-1161659460-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">  
+            </div>
+            </th>
+            <th width="10%">
+    <div class="column">
+    <img src="Pics/New%20folder/gettyimages-678385985-2048x2048.jpg" alt="" width="200" onclick="myFunction(this);">  </div>              
+                <div class="column">
+                <img src="Pics/New%20folder%202/gettyimages-1150491379-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);"></div> 
+            </th>
+             <th width="10%">
+    <div class="column">
+    <img src="Pics/New%20folder%202/gettyimages-629545607-2048x2048.jpg" alt="" width="200" onclick="myFunction(this);">  </div>              
+                <div class="column">
+                <img src="Pics/New%20folder%202/gettyimages-907817072-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);"></div> 
+            </th>
+        </tr>
+    </table>
+</div>
+
+
+<div class="container">
+  
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  
+  <img id="expandedImg" style="width:100%">
+
+  
+  <div id="imgtext"></div>
+</div>
+    
+    <br><hr><br>
+    <iframe id="tour" src="Tourpkgs.html" border="0" width="100%" height="610" style="border-top: hidden;border-bottom: hidden"></iframe>
+    <br>
+    <p align="right"><a href="#top" style="text-decoration: none;"><button class="dropbtn" style="font-size:16px; font-weight: 600;text-align: center;background-color: greenyellow">Back to Top</button></a></p>
+<iframe id="footer" src="contact%20us%20&%20footer.html" border="0" width="100%" height="400" style="border-top: hidden;border-bottom: thin"></iframe>
+</body>
+</html>
