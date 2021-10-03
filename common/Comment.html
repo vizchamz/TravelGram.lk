@@ -1,77 +1,95 @@
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="../css/table.css">
-<link href="../css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../css/table.css">
+  <link href="../css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-<center><div style="width: 50%;border: 5px solid grey;padding: 50px;margin: 10px;border-radius: 35px;box-shadow: 5px 5px 5px grey">
-    <form id="form1" name="form1" method="post" action="../php/insert.php">
-  <center><h2 style="text-shadow: 1px 1px 2px grey">Add a Comment...</h2></center>
-    <span style="text-align: left"><br>
-    </span>
-  <center><table width="650" height="400" border="0" align="center" style="border-top: hidden; font-size: 18px;">
-      <tbody>
-        <tr>
-          <td width="20%" height="30" style="text-align: left"> Name
-              <label for="textfield">:</label>
-          </td>
-          <td width="40%" style="text-align: left"><input name="n" type="text" id="textfield2" form="form1" autocomplete="off" size="80%"></td>
-        </tr>
-        <tr>
-          <td height="30" style="text-align: left">Gender
-              <label for="select2">:</label>
-          </td>
-          <td style="text-align: left">
-            <span style="text-align: left">
-            <select name="gen" id="select">
-              <option selected="selected">Male</option>
-              <option>Female</option>
-            </select>
-          </span></td>
-        </tr>
-        <tr>
-          <td height="30" style="text-align: left">Age
-              <label for="textfield2">:</label>
-          </td>
-          <td style="text-align: left; font-weight: 400;"><input name="age" type="text" id="textfield" size="80%"></td>
-        </tr>
-          <tr>
-          <td height="30" style="text-align: left">Country
-              <label for="select2">:</label>
-          </td>
-          <td style="text-align: left">
-            <span style="text-align: left">
-            <select name="country" id="select">
-              <option selected="selected">Sri Lanka</option>
-              <option>India</option>
-                <option>Japan</option>
-                <option>Pakistan</option>
-                <option>China</option>
-            </select>
-          </span></td>
-        </tr>
-        <tr>
-          <td height="60" class="align-content-md-center" style="text-align: left">Comment
-              <label for="textarea2">:</label>
-          </td>
-          <td class="align-content-md-center" style="text-align: left">
-            <span style="text-align: left">
-            <textarea name="comment" cols="82" rows="10" id="textarea2"></textarea>
-          </span></td>
-        </tr>
-        <tr>
-          <td height="30" colspan="2" style="text-align: left">            
-              <center>
-              <span style="text-align: left">
-              <input type="submit" class="dropbtn" style="font-size:16px; font-weight: 600;text-align: center;background-color: silver;border:1px solid black">
-              &nbsp;&nbsp;&nbsp;
-              <input type="reset" class="dropbtn" style="font-size:16px; font-weight: 600;text-align: center;background-color: silver;border:1px solid black">
-              </span>
-          </center>
-            </td>
-        </tr>
-      </tbody>
-  </table></center>
-    </form></div></center>
-    </body>
+  <center>
+    <div
+      style="width: 50%;border: 5px solid grey;padding: 50px;margin: 10px;border-radius: 35px;box-shadow: 5px 5px 5px grey">
+      <form id="form1" name="form1" method="post" action="../php/insert.php">
+        <center>
+          <h2 style="text-shadow: 1px 1px 2px grey">Add a Comment...</h2>
+        </center>
+        <span style="text-align: left"><br>
+        </span>
+        <center>
+          <table width="650" height="400" border="0" align="center" style="border-top: hidden; font-size: 18px;">
+            <tbody>
+              <tr>
+                <td width="20%" height="30" style="text-align: left"> Name
+                  <label for="textfield">:</label>
+                </td>
+                <td width="40%" style="text-align: left"><input name="n" type="text" id="textfield2" form="form1"
+                    autocomplete="off" size="80%"></td>
+              </tr>
+              <tr>
+                <td height="30" style="text-align: left">Gender
+                  <label for="select2">:</label>
+                </td>
+                <td style="text-align: left">
+                  <span style="text-align: left">
+                    <select name="gen" id="select">
+                      <option selected="selected">Male</option>
+                      <option>Female</option>
+                    </select>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td height="30" style="text-align: left">Age
+                  <label for="textfield2">:</label>
+                </td>
+                <td style="text-align: left; font-weight: 400;"><input name="age" type="text" id="textfield" size="80%">
+                </td>
+              </tr>
+              <tr>
+                <td height="30" style="text-align: left">Country
+                  <label for="select2">:</label>
+                </td>
+                <td style="text-align: left">
+                  <span style="text-align: left">
+                    <select name="country" id="select">
+                      <option selected="selected">Sri Lanka</option>
+                      <option>India</option>
+                      <option>Japan</option>
+                      <option>Pakistan</option>
+                      <option>China</option>
+                    </select>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td height="60" class="align-content-md-center" style="text-align: left">Comment
+                  <label for="textarea2">:</label>
+                </td>
+                <td class="align-content-md-center" style="text-align: left">
+                  <span style="text-align: left">
+                    <textarea name="comment" cols="82" rows="10" id="textarea2"></textarea>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td height="30" colspan="2" style="text-align: left">
+                  <center>
+                    <span style="text-align: left">
+                      <input type="submit" class="dropbtn"
+                        style="font-size:16px; font-weight: 600;text-align: center;background-color: silver;border:1px solid black">
+                      &nbsp;&nbsp;&nbsp;
+                      <input type="reset" class="dropbtn"
+                        style="font-size:16px; font-weight: 600;text-align: center;background-color: silver;border:1px solid black">
+                    </span>
+                  </center>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </center>
+      </form>
+    </div>
+  </center>
+</body>
+
 </html>

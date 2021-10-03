@@ -1,362 +1,438 @@
 <!doctype html>
 <html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/table.css">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TravelGram</title>
-    <link rel="icon" href="../img/Icon/cropped-travel-icon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style type="text/css">
-    .myclass
-    a:link {
-  color: blue;
-}
+  <link rel="stylesheet" type="text/css" href="../css/table.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TravelGram</title>
+  <link rel="icon" href="../img/Icon/cropped-travel-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    .myclass a:link {
+      color: blue;
+    }
 
 
-a:visited {
-  color: grey;
-}
+    a:visited {
+      color: grey;
+    }
 
 
-a:hover {
-  color: red;
-}
+    a:hover {
+      color: red;
+    }
 
 
-a:active {
-  color: darkred;
-}
-    
-    .dropdown-content a:hover {background-color: #f1f1f1;}
-    
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
+    a:active {
+      color: darkred;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #e9e9e9;
+    }
 
 
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
 
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
 
 
-.topnav a.active {
-  background-color: #2196F3;
-  color: white;
-}
+    .topnav a.active {
+      background-color: #2196F3;
+      color: white;
+    }
 
 
-.topnav input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-}
+    .topnav input[type=text] {
+      float: right;
+      padding: 6px;
+      border: none;
+      margin-top: 8px;
+      margin-right: 16px;
+      font-size: 17px;
+    }
 
 
-@media screen and (max-width: 600px) {
-  .topnav a, .topnav input[type=text] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
-  }
-}
-    
-.column {
-  float: center;
-  width: 10;
-  padding: 0px;
-}
+    @media screen and (max-width: 600px) {
+
+      .topnav a,
+      .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+      }
+
+      .topnav input[type=text] {
+        border: 1px solid #ccc;
+      }
+    }
+
+    .column {
+      float: center;
+      width: 10;
+      padding: 0px;
+    }
 
 
-.column img {
-  opacity: 0.8;
-  cursor: pointer;
-}
+    .column img {
+      opacity: 0.8;
+      cursor: pointer;
+    }
 
-.column img:hover {
-  opacity: 1;
-}
-
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    .column img:hover {
+      opacity: 1;
+    }
 
 
-.container {
-  position: relative;
-  display: none;
-}
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
 
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
+    .container {
+      position: relative;
+      display: none;
+    }
 
 
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-</style>
-<link href="../css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+    #imgtext {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: white;
+      font-size: 20px;
+    }
+
+
+    .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: white;
+      font-size: 35px;
+      cursor: pointer;
+    }
+  </style>
+  <link href="../css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-<div class="container"></div>
-<nav>
+  <div class="container"></div>
+  <nav>
     <table id="top" width="100%" border="1" style="border-top-style: hidden">
-        <tbody>
-            <tr style="background-color:lightgrey">
-                <th height="40" style="font-size:12px; font-weight: 600;text-align: left;border-right:hidden" ><a id="myclass" href="#gallery" style="text-decoration: none">&nbsp;&nbsp; GALLERY &nbsp;&nbsp;</a></th>
-                    <th height="40" colspan="2" style="font-size:12px; font-weight: 600;text-align: left;border-right:hidden" >
-                <div class="search-container">
-    <form action="">
-      <input type="text" placeholder="Search..." name="search">&nbsp;
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-                </th>
-        <th width="419" height="40" colspan="3" style="font-size:13px; font-weight: 600;text-align: right" > &nbsp; HOTLINE: +94 112 311 311 &nbsp;&nbsp;<a href="https://www.inquiries@travelgram.lk/" target="_blank" style="text-decoration: none">inquiries@travelgram.lk</a>&nbsp;&nbsp;
-        </th>
-        
-      </tr>
+      <tbody>
+        <tr style="background-color:lightgrey">
+          <th height="40" style="font-size:12px; font-weight: 600;text-align: left;border-right:hidden"><a id="myclass"
+              href="#gallery" style="text-decoration: none">&nbsp;&nbsp; GALLERY &nbsp;&nbsp;</a></th>
+          <th height="40" colspan="2" style="font-size:12px; font-weight: 600;text-align: left;border-right:hidden">
+            <div class="search-container">
+              <form action="">
+                <input type="text" placeholder="Search..." name="search">&nbsp;
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </th>
+          <th width="419" height="40" colspan="3" style="font-size:13px; font-weight: 600;text-align: right"> &nbsp;
+            HOTLINE: +94 112 311 311 &nbsp;&nbsp;<a href="https://www.inquiries@travelgram.lk/" target="_blank"
+              style="text-decoration: none">inquiries@travelgram.lk</a>&nbsp;&nbsp;
+          </th>
+
+        </tr>
         <tr height="90">
-            <th width="40%" scope="col"  style="text-align: left" >&nbsp;<a id="myclass" href="../index.html" style="text-decoration: none">  <img src="../img/images (1)1.png" alt="" width="140"></a></th>
-            
-            <th width="3%" scope="col" style="font-size:14px; font-weight: 600;text-align: center;background-color: lightgrey"><a id="myclass" href="../index.html" style="text-decoration: none">  HOME</a></th>
-            <th width="5%" scope="col" style="font-size:14px; font-weight: 600;text-align: center"><a id="myclass" href="#tour" style="text-decoration: none">TOUR PACKAGES</a></th>
-        <th width="3%" scope="col" style="font-size:14px; font-weight: 600">
+          <th width="40%" scope="col" style="text-align: left">&nbsp;<a id="myclass" href="../index.html"
+              style="text-decoration: none"> <img src="../img/images (1)1.png" alt="" width="140"></a></th>
+
+          <th width="3%" scope="col"
+            style="font-size:14px; font-weight: 600;text-align: center;background-color: lightgrey"><a id="myclass"
+              href="../index.html" style="text-decoration: none"> HOME</a></th>
+          <th width="5%" scope="col" style="font-size:14px; font-weight: 600;text-align: center"><a id="myclass"
+              href="#tour" style="text-decoration: none">TOUR PACKAGES</a></th>
+          <th width="3%" scope="col" style="font-size:14px; font-weight: 600">
             <div class="dropdown" style="text-align: center">
-  <button class="dropbtn" style="font-size:14px; font-weight: 600;text-align: center">DESTINATIONS</button>
-  <div class="dropdown-content">
-    <a href="galle.html" style="text-decoration: none;text-align: center">Galle</a>
-    <a href="kandy.html" style="text-decoration: none;text-align: center" target="_blank">Kandy</a>
-    <a href="ella.html" style="text-decoration: none;text-align: center" target="_blank">Ella</a>
-      <a href="jaffna.html" style="text-decoration: none;text-align: center" target="_blank">Jaffna</a>
-      <a href="anuradhapura.html" style="text-decoration: none;text-align: center" target="_blank">Anuradhapura</a>
+              <button class="dropbtn" style="font-size:14px; font-weight: 600;text-align: center">DESTINATIONS</button>
+              <div class="dropdown-content">
+                <a href="galle.html" style="text-decoration: none;text-align: center">Galle</a>
+                <a href="kandy.html" style="text-decoration: none;text-align: center" target="_blank">Kandy</a>
+                <a href="ella.html" style="text-decoration: none;text-align: center" target="_blank">Ella</a>
+                <a href="jaffna.html" style="text-decoration: none;text-align: center" target="_blank">Jaffna</a>
+                <a href="anuradhapura.html" style="text-decoration: none;text-align: center"
+                  target="_blank">Anuradhapura</a>
+              </div>
+            </div>
+          </th>
+          <th width="4%" scope="col" style="font-size:14px; font-weight: 600;text-align: center"><a id="myclass"
+              href="Application Form.html" style="text-decoration: none">BOOK NOW</a></th>
+          <th width="4%" scope="col" style="font-size:14px; font-weight: 600;text-align: center" id="myclass"><a
+              href="#footer" style="text-decoration: none">CONTACT US</a></th>
+        </tr>
+      </tbody>
+    </table>
+  </nav>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="../img/galle/gettyimages-165483442-2048x2048.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="../img/galle/gettyimages-641293560-2048x2048.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="../img/galle/kanchana-amilani-2XFMshwCY7Y-unsplash.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 5</div>
+      <img src="../img/galle/gettyimages-648275314-2048x2048.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 5</div>
+      <img src="../img/galle/galle_fort_sri_lanka-wallpaper-1920x1080.jpg" style="width:100%">
+    </div>
+
   </div>
-</div></th>
-            <th width="4%" scope="col" style="font-size:14px; font-weight: 600;text-align: center"><a id="myclass" href="Application Form.html" style="text-decoration: none">BOOK NOW</a></th>
-            <th width="4%" scope="col" style="font-size:14px; font-weight: 600;text-align: center" id="myclass"><a href="#footer" style="text-decoration: none">CONTACT US</a></th>
-    </tr>
-  </tbody>
-</table>
-	</nav>
-<div class="slideshow-container">
+  <br>
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 5</div>
-  <img src="../img/galle/gettyimages-165483442-2048x2048.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 5</div>
-  <img src="../img/galle/gettyimages-641293560-2048x2048.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 5</div>
-  <img src="../img/galle/kanchana-amilani-2XFMshwCY7Y-unsplash.jpg" style="width:100%">
-</div>
-
-    <div class="mySlides fade">
-  <div class="numbertext">4 / 5</div>
-  <img src="../img/galle/gettyimages-648275314-2048x2048.jpg" style="width:100%">
-</div>
-    
-    <div class="mySlides fade">
-  <div class="numbertext">5 / 5</div>
-  <img src="../img/galle/galle_fort_sri_lanka-wallpaper-1920x1080.jpg" style="width:100%">
-</div>
-    
-</div>
-<br>
-
-<div style="text-align:center">
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
+  <div style="text-align:center">
     <span class="dot"></span>
     <span class="dot"></span>
-</div>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
 
-<script>
-var slideIndex = 0;
-showSlides();
+  <script>
+    var slideIndex = 0;
+    showSlides();
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
     function myFunction(imgs) {
-  
-  var expandImg = document.getElementById("expandedImg");
-  
-  var imgText = document.getElementById("imgtext");
-  
-  expandImg.src = imgs.src;
-  
-  imgText.innerHTML = imgs.alt;
-  
-  expandImg.parentElement.style.display = "block";
-}
-    
-</script>
-  <hr><br><table width="100%" border="0" style="border-top-style: hidden">
+
+      var expandImg = document.getElementById("expandedImg");
+
+      var imgText = document.getElementById("imgtext");
+
+      expandImg.src = imgs.src;
+
+      imgText.innerHTML = imgs.alt;
+
+      expandImg.parentElement.style.display = "block";
+    }
+
+  </script>
+  <hr><br>
+  <table width="100%" border="0" style="border-top-style: hidden">
     <tr>
-        <th  width="50%" height="10%" cellpadding="1" colspan="2">
-    <h3 style="text-align:center;text-shadow: 1px 1px 2px grey">Amazing Galle</h3>
-            <center><font size="2" style="text-align:center;font-weight: 500">HISTORICAL & HERITAGE TOURS</font></center>
-            <br>
-            <h6 style="text-align:center;font-weight: 500">
-            Situated on the southwest coast of Sri Lanka, the city of Galle is the go-to destination <br>
-            for many travellers on this marvellous island. With its beautiful collection of Dutch colonial buildings <br>
-            and rocky coastline, Galle exudes charm and sophistication as well as a unique cultural identity,<br>
-            shaped by centuries of different influences. The main fort area is the centrepiece of this<br>
-            city and has a number of quaint boutiques and cafes lining the beautiful, palm-fringed streets.</h6>
-            <br><br></th>
-    <th rowspan="2"><center>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d126958.76642767777!2d80.2190949573993!3d6.0683353267552755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sthings%20to%20do!5e0!3m2!1sen!2slk!4v1574602259657!5m2!1sen!2slk" width="70%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></center>
+      <th width="50%" height="10%" cellpadding="1" colspan="2">
+        <h3 style="text-align:center;text-shadow: 1px 1px 2px grey">Amazing Galle</h3>
+        <center>
+          <font size="2" style="text-align:center;font-weight: 500">HISTORICAL & HERITAGE TOURS</font>
+        </center>
+        <br>
+        <h6 style="text-align:center;font-weight: 500">
+          Situated on the southwest coast of Sri Lanka, the city of Galle is the go-to destination <br>
+          for many travellers on this marvellous island. With its beautiful collection of Dutch colonial buildings <br>
+          and rocky coastline, Galle exudes charm and sophistication as well as a unique cultural identity,<br>
+          shaped by centuries of different influences. The main fort area is the centrepiece of this<br>
+          city and has a number of quaint boutiques and cafes lining the beautiful, palm-fringed streets.</h6>
+        <br><br>
+      </th>
+      <th rowspan="2">
+        <center>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d126958.76642767777!2d80.2190949573993!3d6.0683353267552755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sthings%20to%20do!5e0!3m2!1sen!2slk!4v1574602259657!5m2!1sen!2slk"
+            width="70%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </center>
       </th>
     </tr>
-            <tr>
-                <th>
-    <div class="content">
-<ul style="text-align:left;font-size:14px">
-	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="../img/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt="" style="vertical-align: middle" width="20"><span class="txt" style="vertical-align: middle;font-weight: 700">&emsp;Galle Dutch Fort</span></li><br>
-	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="../img/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt="" style="vertical-align: middle" width="20"><span class="txt" style="vertical-align: middle;font-weight: 700">&emsp;Galle Lighthouse</span></li><br>
-	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="../img/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt="" style="vertical-align: middle" width="20"><span class="txt" style="vertical-align: middle;font-weight: 700">&emsp;National Museum of Galle</span></li><br>
-	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="../img/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt="" style="vertical-align: middle" width="20"><span class="txt" style="vertical-align: middle;font-weight: 700">&emsp;Lighthouse Street</span></li><br>
-	<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="../img/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt="" style="vertical-align: middle" width="20"><span class="txt" style="vertical-align: middle;font-weight: 700">&emsp;Jungle Beach</span></li>
-        </ul>
+    <tr>
+      <th>
+        <div class="content">
+          <ul style="text-align:left;font-size:14px">
+            <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img
+                src="../img/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt=""
+                style="vertical-align: middle" width="20"><span class="txt"
+                style="vertical-align: middle;font-weight: 700">&emsp;Galle Dutch Fort</span></li><br>
+            <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img
+                src="../img/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt=""
+                style="vertical-align: middle" width="20"><span class="txt"
+                style="vertical-align: middle;font-weight: 700">&emsp;Galle Lighthouse</span></li><br>
+            <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img
+                src="../img/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt=""
+                style="vertical-align: middle" width="20"><span class="txt"
+                style="vertical-align: middle;font-weight: 700">&emsp;National Museum of Galle</span></li><br>
+            <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img
+                src="../img/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt=""
+                style="vertical-align: middle" width="20"><span class="txt"
+                style="vertical-align: middle;font-weight: 700">&emsp;Lighthouse Street</span></li><br>
+            <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img
+                src="../img/Location/113-1134899_download-png-location-icon-png-transparent-background.png" alt=""
+                style="vertical-align: middle" width="20"><span class="txt"
+                style="vertical-align: middle;font-weight: 700">&emsp;Jungle Beach</span></li>
+          </ul>
+        </div>
+      </th>
+      <th>
+        <center>
+          <div
+            style="background-color: whitesmoke;width: 350px;height:220px; padding: 20px;text-align: center;vertical-align: middle;border: 1px solid black;box-shadow: 5px 5px 5px grey;font-weight: 700">
+            Day Excursions to Galle from Colombo<br>LKR 9,372 per adult<br><br>
+            <div style="font-weight: 500;text-align: left">
+              <li style="list-style: disc">One day tour</li>
+              <li style="list-style: disc">Food & beverages</li>
+              <li style="list-style: disc">Boat ride</li>
+              <li style="list-style: disc">Entrance tickets</li>
+              <li style="list-style: disc">Sinhala & English speaking chauffeur guide</li>
             </div>
-        </th>
-                <th><center><div style="background-color: whitesmoke;width: 350px;height:220px; padding: 20px;text-align: center;vertical-align: middle;border: 1px solid black;box-shadow: 5px 5px 5px grey;font-weight: 700">Day Excursions to Galle from Colombo<br>LKR 9,372 per adult<br><br>
-                    <div style="font-weight: 500;text-align: left">
-                        <li style="list-style: disc">One day tour</li>
-                        <li style="list-style: disc">Food & beverages</li>
-                    <li style="list-style: disc">Boat ride</li>
-                    <li style="list-style: disc">Entrance tickets</li>
-                        <li style="list-style: disc">Sinhala & English speaking chauffeur guide</li>
-                    </div>
-                    <div>
-                    <p align="right"><a href="Application%20Form.html" target="_blank" style="text-decoration: none;"><button class="dropbtn" style="font-size:16px; font-weight: 600;text-align: center;background-color: aqua">Book Now</button></a></p>
-                    </div>
-                    </div>
-                    </center>
-                </th>
+            <div>
+              <p align="right"><a href="Application%20Form.html" target="_blank" style="text-decoration: none;"><button
+                    class="dropbtn"
+                    style="font-size:16px; font-weight: 600;text-align: center;background-color: aqua">Book
+                    Now</button></a></p>
+            </div>
+          </div>
+        </center>
+      </th>
     </tr>
-    </table>
-    <br><hr><br>
-    <h3 id="gallery" style="text-align:center;text-shadow: 1px 1px 2px grey">Gallery</h3>
-    <br>
-<div>
+  </table>
+  <br>
+  <hr><br>
+  <h3 id="gallery" style="text-align:center;text-shadow: 1px 1px 2px grey">Gallery</h3>
+  <br>
+  <div>
     <table width="80%" height="450" border="0" align="center" style="border-top: hidden">
-        <tr>
-            <th width="10%">
-  <div class="column"><img src="../img/New%20folder/gettyimages-513217619-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">  </div>
-              <div class="column"><img src="../img/New%20folder/gettyimages-640357550-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">              </div>
-                </th>
-            <th width="10%">
-  <div class="column">
-    <img src="../img/New%20folder/gettyimages-545121451-2048x2048.jpg" alt="" width="200" onclick="myFunction(this);">  </div>
-              <div class="column">
-                <img src="../img/New%20folder/gettyimages-508126316-2048x2048.jpg" alt="" width="200" onclick="myFunction(this);">              </div>
-            </th>
-            <th width="10%">
-  <div class="column"><img src="../img/New%20folder/gettyimages-924398998-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">
-  </div>
-              <div class="column"><img src="../img/New%20folder/gettyimages-545121469-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">
-              </div>
-            </th>
-            <th width="10%">
-  <div class="column">
-    <img src="../img/New%20folder/gettyimages-171582136-2048x2048.jpg" alt="" width="200" onclick="myFunction(this);">  </div>
-              <div class="column">
-                <img src="../img/New%20folder/fredrik-ohlander-LQjCZPTnaHU-unsplash.jpg" alt="" width="200" onclick="myFunction(this);">              </div>
-            </th>
-            <th width="10%">
-    <div class="column"><img src="../img/New%20folder/alex-azabache-BNfe9fpf2Ik-unsplash.jpg" alt="" width="200" onClick="myFunction(this);">
-                </div>
-              <div class="column"><img src="../img/New%20folder/gettyimages-545121451-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);">  
-            </div>
-            </th>
-            <th width="10%">
-    <div class="column">
-    <img src="../img/New%20folder/gettyimages-78537158-2048x2048.jpg" alt="" width="200" onclick="myFunction(this);">  </div>              
-                <div class="column">
-                <img src="../img/New%20folder/fredrik-ohlander-P3uV_83dONw-unsplash.jpg" alt="" width="200" onClick="myFunction(this);"></div> 
-            </th>
-             <th width="10%">
-    <div class="column">
-    <img src="../img/New%20folder/nitin-gupta-WUtQNQ-rQ6s-unsplash.jpg" alt="" width="200" onclick="myFunction(this);">  </div>              
-                <div class="column">
-                <img src="../img/New%20folder/gettyimages-545121487-2048x2048.jpg" alt="" width="200" onClick="myFunction(this);"></div> 
-            </th>
-        </tr>
+      <tr>
+        <th width="10%">
+          <div class="column"><img src="../img/New%20folder/gettyimages-513217619-2048x2048.jpg" alt="" width="200"
+              onClick="myFunction(this);"> </div>
+          <div class="column"><img src="../img/New%20folder/gettyimages-640357550-2048x2048.jpg" alt="" width="200"
+              onClick="myFunction(this);"> </div>
+        </th>
+        <th width="10%">
+          <div class="column">
+            <img src="../img/New%20folder/gettyimages-545121451-2048x2048.jpg" alt="" width="200"
+              onclick="myFunction(this);">
+          </div>
+          <div class="column">
+            <img src="../img/New%20folder/gettyimages-508126316-2048x2048.jpg" alt="" width="200"
+              onclick="myFunction(this);">
+          </div>
+        </th>
+        <th width="10%">
+          <div class="column"><img src="../img/New%20folder/gettyimages-924398998-2048x2048.jpg" alt="" width="200"
+              onClick="myFunction(this);">
+          </div>
+          <div class="column"><img src="../img/New%20folder/gettyimages-545121469-2048x2048.jpg" alt="" width="200"
+              onClick="myFunction(this);">
+          </div>
+        </th>
+        <th width="10%">
+          <div class="column">
+            <img src="../img/New%20folder/gettyimages-171582136-2048x2048.jpg" alt="" width="200"
+              onclick="myFunction(this);">
+          </div>
+          <div class="column">
+            <img src="../img/New%20folder/fredrik-ohlander-LQjCZPTnaHU-unsplash.jpg" alt="" width="200"
+              onclick="myFunction(this);">
+          </div>
+        </th>
+        <th width="10%">
+          <div class="column"><img src="../img/New%20folder/alex-azabache-BNfe9fpf2Ik-unsplash.jpg" alt="" width="200"
+              onClick="myFunction(this);">
+          </div>
+          <div class="column"><img src="../img/New%20folder/gettyimages-545121451-2048x2048.jpg" alt="" width="200"
+              onClick="myFunction(this);">
+          </div>
+        </th>
+        <th width="10%">
+          <div class="column">
+            <img src="../img/New%20folder/gettyimages-78537158-2048x2048.jpg" alt="" width="200"
+              onclick="myFunction(this);">
+          </div>
+          <div class="column">
+            <img src="../img/New%20folder/fredrik-ohlander-P3uV_83dONw-unsplash.jpg" alt="" width="200"
+              onClick="myFunction(this);">
+          </div>
+        </th>
+        <th width="10%">
+          <div class="column">
+            <img src="../img/New%20folder/nitin-gupta-WUtQNQ-rQ6s-unsplash.jpg" alt="" width="200"
+              onclick="myFunction(this);">
+          </div>
+          <div class="column">
+            <img src="../img/New%20folder/gettyimages-545121487-2048x2048.jpg" alt="" width="200"
+              onClick="myFunction(this);">
+          </div>
+        </th>
+      </tr>
     </table>
-</div>
+  </div>
 
 
-<div class="container">
-  
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <div class="container">
 
-  
-  <img id="expandedImg" style="width:100%">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
 
-  
-  <div id="imgtext"></div>
-</div>
-    
-    <br><hr><br>
-    <iframe id="tour" src="Tourpkgs.html" border="0" width="100%" height="610" style="border-top: hidden;border-bottom: hidden"></iframe>
-    <br>
-    <p align="right"><a href="#top" style="text-decoration: none;"><button class="dropbtn" style="font-size:16px; font-weight: 600;text-align: center;background-color: greenyellow">Back to Top</button></a></p>
-<iframe id="footer" src="contact%20us%20&%20footer.html" border="0" width="100%" height="400" style="border-top: hidden;border-bottom: thin"></iframe>
+
+    <img id="expandedImg" style="width:100%">
+
+
+    <div id="imgtext"></div>
+  </div>
+
+  <br>
+  <hr><br>
+  <iframe id="tour" src="Tourpkgs.html" border="0" width="100%" height="610"
+    style="border-top: hidden;border-bottom: hidden"></iframe>
+  <br>
+  <p align="right"><a href="#top" style="text-decoration: none;"><button class="dropbtn"
+        style="font-size:16px; font-weight: 600;text-align: center;background-color: greenyellow">Back to
+        Top</button></a></p>
+  <iframe id="footer" src="contact%20us%20&%20footer.html" border="0" width="100%" height="400"
+    style="border-top: hidden;border-bottom: thin"></iframe>
 </body>
+
 </html>
