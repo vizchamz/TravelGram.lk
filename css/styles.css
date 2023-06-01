@@ -79,10 +79,9 @@
 
   #mySidenav a {
     position: absolute;
-    right: -80px;
+    right: 0;
     transition: 0.3s;
-    padding: 15px;
-    width: 238px;
+    padding: 10px;
     text-decoration: none;
     font-size: 18px;
     color: white;
@@ -90,7 +89,8 @@
   }
 
   #mySidenav a:hover {
-    right: 0;
+    right: 10px;
+    transform: scale(1.1);
   }
 
   #about {
