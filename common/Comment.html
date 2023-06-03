@@ -2,14 +2,16 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="../css/table.css">
-  <link href="../css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.10/dist/sweetalert2.min.css">
 </head>
 
 <body>
   <center>
     <div
       style="width: 50%;border: 5px solid grey;padding: 50px;margin: 10px;border-radius: 35px;box-shadow: 5px 5px 5px grey">
-      <form id="form1" name="form1" method="post" action="../php/insert.php">
+      <!-- <form id="form1" name="form1" method="post" action="../php/insert.php"> -->
+      <form id="contactForm" name="contactForm" method="post">
         <center>
           <h2 style="text-shadow: 1px 1px 2px grey">Add a Comment...</h2>
         </center>
@@ -22,8 +24,13 @@
                 <td width="20%" height="30" style="text-align: left"> Name
                   <label for="textfield">:</label>
                 </td>
-                <td width="40%" style="text-align: left"><input name="n" type="text" id="textfield2" form="form1"
-                    autocomplete="off" size="80%"></td>
+                <td width="40%" style="text-align: left"><input name="n" type="text" id="name" form="contactForm" size="80%"></td>
+              </tr>
+              <tr>
+                <td width="20%" height="30" style="text-align: left"> Email
+                  <label for="textfield">:</label>
+                </td>
+                <td width="40%" style="text-align: left"><input name="email" type="text" id="email" form="contactForm" size="80%"></td>
               </tr>
               <tr>
                 <td height="30" style="text-align: left">Gender
@@ -31,7 +38,7 @@
                 </td>
                 <td style="text-align: left">
                   <span style="text-align: left">
-                    <select name="gen" id="select">
+                    <select name="gen" id="gender">
                       <option selected="selected">Male</option>
                       <option>Female</option>
                     </select>
@@ -42,7 +49,7 @@
                 <td height="30" style="text-align: left">Age
                   <label for="textfield2">:</label>
                 </td>
-                <td style="text-align: left; font-weight: 400;"><input name="age" type="text" id="textfield" size="80%">
+                <td style="text-align: left; font-weight: 400;"><input name="age" type="number" id="age" size="80%">
                 </td>
               </tr>
               <tr>
@@ -51,7 +58,7 @@
                 </td>
                 <td style="text-align: left">
                   <span style="text-align: left">
-                    <select name="country" id="select">
+                    <select name="country" id="country">
                       <option selected="selected">Sri Lanka</option>
                       <option>India</option>
                       <option>Japan</option>
@@ -67,7 +74,7 @@
                 </td>
                 <td class="align-content-md-center" style="text-align: left">
                   <span style="text-align: left">
-                    <textarea name="comment" cols="82" rows="10" id="textarea2"></textarea>
+                    <textarea name="comment" cols="82" rows="8" id="comment"></textarea>
                   </span>
                 </td>
               </tr>
@@ -90,6 +97,10 @@
       </form>
     </div>
   </center>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.10/dist/sweetalert2.all.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="../js/firebase.js"></script>
 </body>
 
 </html>
